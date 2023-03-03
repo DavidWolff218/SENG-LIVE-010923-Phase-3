@@ -59,8 +59,15 @@ def pet_greeting(param = "Pet"):
     # pet_greeting("Spot", "Rowdy!") => "Spot needs a walk."
     # pet_greeting("Bud", "Relaxed") => "Bud is all good."
     
-    def pet_statuss
-    
+def pet_status(pet_name, pet_mood):
+    if pet_mood == "Hungry!":
+        print(f"{pet_name} needs to be fed.")
+    elif pet_mood == "Rowdy!":
+        print(f"{pet_name} needs a walk.")
+    else:
+        print(f"{pet_name} is all good.")
+        
+pet_status("Sammy", "Hungry!")
     # Take a moment to note that "pet_name" and "pet_mood" parameters are within Local Scope and take priority over "pet_name" and "pet_mood"
     # in Global Scope.
 
@@ -68,6 +75,17 @@ def pet_greeting(param = "Pet"):
     # If our function is given an incorrect datatype, it should handle the TypeError exception and alert the user
     # pet_birthday(10) => "Happy Birthday! Your pet is now 11."
     # pet_birthday("oops") => "Type Error Occurred"
+    
+def pet_birthday(age):
+    try:
+        print(f"Happy Birthday! Your pet is {age + 1}")
+    except TypeError:
+        print("type error occured")
+    except NameError:
+        print("name error occured")
+    
+pet_birthday(10)    
+pet_birthday("10")
 
     # Note => To view more common Python exceptions, visit https://docs.python.org/3/library/exceptions.html
 
