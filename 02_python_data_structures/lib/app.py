@@ -171,6 +171,14 @@ pet_info = [
         # The loop will continue as long as the counter is less than the length of the list
         # Every loop should increase the count by 1
     # Return the counter 
+    
+def demo_while(list):
+    counter = 0
+    while(counter < len(list) - 1):
+         counter += 1
+    return counter   
+
+# print(demo_while(pet_names))
 
 
 #39. ✅ Create a function that updates the age of a given pet
@@ -182,19 +190,37 @@ pet_info = [
             # Every list will increase the index by 1
         # If the dictionary containing a matching name is found, update the item's age with the new age 
             # Otherwise, return 'Pet not found'
+            
+def update_pet_age(list, name, age):
+    index = 0
+    while(list[index]['name'] != name and index < len(list) -1):
+        index += 1
+        if(list[index][name] == name ):
+            list[index]['age'] = age
+            return list[index]
+        else:
+            return 'Pet Not Found'
     
+# List comprehensions vs genertor expressions
+
 
 # map like 
 #40. ✅ Use list comprehension to return a list containing every pet name from "pet_info" changed to uppercase
+new_pet_list = [pet.get('name').upper() for pet in pet_info]
 
+# print(new_pet_list)
 
 # find like
+# returned pet/ loop/ condtional
 #41. ✅ Use list comprehension to find a pet named spot
-
+spot = [pet for pet in pet_info if pet.get("name") == "Spot" ]
+# print(spot)
 
 # filter like
 #42. ✅ Use list comprehension to find all of the pets under 3 years old
-
+young_pets = [pet for pet in pet_info if pet.get("age") < 3]
+print(young_pets)
 
 #43. ✅ Create a generator expression matching the filter above
-
+# main benefit, less memory intensive
+young_pets = (pet for pet in pet_info if pet.get("age") < 3)
