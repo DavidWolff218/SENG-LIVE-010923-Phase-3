@@ -4,43 +4,54 @@
 # output clean.
 
 # Creating Lists
+# mutable
 #1. ✅ Create a list of 10 pet names
 pet_names = ['Rose', 'Meow Meow Beans', 'Mr.Legumes', 'Luke', 'Lea', 'Princess Grace', 'Spot', 'Tom', 'Mini', 'Paul']
 
 # Reading Information From Lists
 #2. ✅ Return the first pet name
+# print(pet_names[0])
 
 
 #3. ✅ Return all pet names beginning from the 3rd index
-
+# print(pet_names[3:])
 
 #4. ✅ Return all pet names before the 3rd index
-
+# print(pet_names[:3])
 
 #5. ✅ Return all pet names beginning from the 3rd index and up to the 7th
-
+# print(pet_names[3:7])
 
 #6. ✅ Find the index of a given element => .index()
-
+# first one found
+# print(pet_names.index('Paul'))
 
 #7. ✅ Reverse the original list => .reverse()
-
+# print(pet_names.reverse())
+# print(pet_names)
 
 #8. ✅ Return the frequency of a given element => .count()
-
+# print(pet_names.count("Rose"))
 
 # Updating Lists
 #9. ✅ Change the first name to all uppercase letters => .upper()
 
+# pet_names[0] = pet_names[0].upper()
+# print(pet_names)
 
 #10. ✅ Append a new name to the list => .append()
-
+# pet_names.append("Bud")
+# print(pet_names)
 
 #11. ✅ Add a new name at a specific index => .insert()
-
+# arg1 - > index
+# pet_names.insert(1, "Bud")
+# print(pet_names)
 
 #12. ✅ Add two lists together => +
 
+# new_pet_list = pet_names + ["Champ", "Bud"]
+# print(new_pet_list)
 
 #13. ✅ Remove the final element from the list => .pop()
 
@@ -89,7 +100,7 @@ pet_fav_food = {'house plants', 'fish', 'bacon'}
 # Creating 
 #25. ✅  Create a dictionary of pet information with the keys "name", "age" and "breed"
 pet_info_rose = {'name':'Rose', 'age':11, 'breed':'domestic long'}
-
+print(pet_info_rose['name'])
 
 #26. ✅  Use dict to create a dictionary of pet information with the keys "name", "age" and "breed" => dict(...)
 pet_info_spot = dict(name='Spot', age=25, breed='boxer')
