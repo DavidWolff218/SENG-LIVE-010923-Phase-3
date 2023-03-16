@@ -4,18 +4,38 @@
 
 import ipdb
 
+
+
 # Classes
 
 # 1. ✅ Create a Pet class
 
+# class Pet:
+#     pass
+
+# ipdb.set_trace()
     # Note: Add 'pass' to the Pet class 
 
 # 2. ✅ Instantiate a few Pet instances
 
     # Compare the Pet instances. Are each of them the same object?
+    
+# self => the instance at moment of instantiation
 
 # 3. ✅ Demonstrate __init__ 
 
+class Pet:
+    def __init__(self, name, age, breed, owner = "No Owner"):
+        self.name = name
+        self.age = age
+        self.breed = breed
+        self.owner = owner
+        
+        
+fido = Pet("Fido", 5, "Boxer")
+spot = Pet("Spot", 1, "Golden", "David")
+
+ipdb.set_trace()
     # Add arguments to instances  
     
     # Use dot notation to access each Pet instance's attributes 
