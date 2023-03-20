@@ -32,10 +32,10 @@ class Pet:
         self.owner = owner
         
         
-fido = Pet("Fido", 5, "Boxer")
-spot = Pet("Spot", 1, "Golden", "David")
+# fido = Pet("Fido", 5, "Boxer")
+# spot = Pet("Spot", 1, "Golden", "David")
 
-ipdb.set_trace()
+# ipdb.set_trace()
     # Add arguments to instances  
     
     # Use dot notation to access each Pet instance's attributes 
@@ -44,6 +44,10 @@ ipdb.set_trace()
 
 # Instance Methods
 
+#     def say_hello(self):
+#         print("Hello")
+
+# ipdb.set_trace()
 # 4. ✅ Create a "print_pet_details" function that will print each Pet instance's 
 # attributes
 
@@ -56,7 +60,15 @@ ipdb.set_trace()
         # age: 11
         # breed: Domestic Longhair
         # temperament: Sweet
+        
+    def print_pet_details(self):
+        print(f'''
+            name:{self.name}
+            age:{self.age}
+            breed:{self.breed}
+        ''')
 
+ipdb.set_trace()
 # Object Properties => Attributes that are controlled by methods
 
     # Create an Owner class with two instance methods:
