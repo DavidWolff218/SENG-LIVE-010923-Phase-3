@@ -68,8 +68,28 @@ class Pet:
             breed:{self.breed}
         ''')
 
+# ipdb.set_trace()
+
+# Instance/Object Properties => Attributes that are controlled by methods
+
+class Owner:
+    def __init__(self, age):
+            self.age = age
+            
+    def get_name(self):
+        return self._name
+    
+    def set_name(self, name):
+        print("setting ownders name")
+        
+        if(isinstance(name, str)):
+            self._name = name
+        else:
+            print("must be a string")
+            
+    name = property(get_name, set_name)
+            
 ipdb.set_trace()
-# Object Properties => Attributes that are controlled by methods
 
     # Create an Owner class with two instance methods:
 
