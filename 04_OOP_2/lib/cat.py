@@ -25,11 +25,12 @@ class Cat(Pet):
 
     # Add an indoor attribute    
         self.indoor = indoor
+        
 
 # ipdb.set_trace()
 
 # 9. ✅. Create a method unique to the Cat subclass called talk which returns the string "Meow!"
-
+    @property
     def say_meow(self):
         print("Meow!")
 
@@ -38,7 +39,7 @@ class Cat(Pet):
 # 10. ✅. Create a method called print_pet_details to match the print_pet_details in Pet    
         
         # Add super().print_pet_details() and print the indoor attribute
-
+    @property
     def print_pet_details(self):
 
         # Inherited Behaviors from Pet Class
